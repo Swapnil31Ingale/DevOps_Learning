@@ -1,4 +1,4 @@
-i# Docker Learning Journey 🚀
+# **Docker Learning Journey** 🚀
 
 This folder documents my step-by-step hands-on learning of Docker from an absolute beginner level. Each scenario builds on the previous one to gradually introduce real-world container concepts.
 
@@ -28,7 +28,7 @@ This folder documents my step-by-step hands-on learning of Docker from an absolu
   
 ---
 
-## 📁 Folder Structur
+## 📁 Folder Structure
 
 ```
 .
@@ -50,11 +50,12 @@ This folder documents my step-by-step hands-on learning of Docker from an absolu
 ---
 
 ## 🚧 Coming Up Next
-- Volumes & Bind Mounts
+- Volumes
 - Multi-container apps
 - Docker Compose v3
 - Docker networks
 - Docker Hub + CI/CD integration
+- Dockerfile optimizations (multi-stage builds)
 
 ---
 
