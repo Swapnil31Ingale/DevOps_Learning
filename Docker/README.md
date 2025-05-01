@@ -21,6 +21,11 @@ This folder documents my step-by-step hands-on learning of Docker from an absolu
 - **Tools Used**: Node.js, Environment Variables, Docker Compose
 - **Location**: `DockerFiles/node-app/`
 
+### 4. Bind Mounts with Live Code Reload
+- **Description**: Used bind mounts to sync code changes between the host and container in real-time. Integrated `nodemon` for automatic reload on changes.
+- **Tools Used**: Docker Compose, Bind Mounts, Nodemon
+- **Location**: `DockerFiles/node-app/`
+  
 ---
 
 ## 📁 Folder Structur
