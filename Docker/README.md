@@ -21,6 +21,16 @@ This folder documents my step-by-step hands-on learning of Docker from an absolu
 - **Tools Used**: Node.js, Environment Variables, Docker Compose
 - **Location**: `DockerFiles/node-app/`
 
+### 4. Persist Data using Named Volumes
+- **Description**: Created a Node.js counter app that stores data in a local file inside a named Docker volume.
+- **Tools Used**: Node.js, Docker Compose, Named Volumes
+- **Location**: `DockerFiles/node-volume-counter/`
+
+### 5. Multi-Container App with MongoDB
+- **Description**: Built a Node.js app that connects to MongoDB in a separate container. Used Docker Compose for orchestration.
+- **Tools Used**: Node.js, MongoDB, Docker Compose
+- **Location**: `DockerFiles/node-mongo-counter/`
+
 ---
 
 ## 📁 Folder Structur
@@ -31,22 +41,32 @@ This folder documents my step-by-step hands-on learning of Docker from an absolu
 │   ├── Dockerfile
 │   └── index.html
 ├── README.md
-└── node-app
+├── node-app
+│   ├── Dockerfile
+│   ├── app.js
+│   ├── app_bkp.js
+│   ├── docker-compose.yml
+│   ├── package-lock.json
+│   ├── package.json
+│   └── package_bkp.json
+├── node-mongo-counter
+│   ├── Dockerfile
+│   ├── app.js
+│   ├── docker-compose.yml
+│   ├── package-lock.json
+│   └── package.json
+└── node-persist
     ├── Dockerfile
     ├── app.js
-    ├── app_bkp.js
     ├── docker-compose.yml
-    ├── package-lock.json
-    ├── package.json
-    └── package_bkp.json
+    └── package.json
+
 ```
 
 
 ---
 
 ## 🚧 Coming Up Next
-- Volumes & Bind Mounts
-- Multi-container apps
 - Docker Compose v3
 - Docker networks
 - Docker Hub + CI/CD integration
