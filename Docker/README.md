@@ -46,6 +46,11 @@ This folder documents my step-by-step hands-on learning of Docker from an absolu
 - **Tools Used**: Node.js, MongoDB, Docker Compose, Custom Networks 
 - **Location**: `Docker/docker-networking/` 
 
+### 9.Docker Image CI 🚀
+- **Description**: Automated CI pipeline to build and push a Docker image for a Node.js + MongoDB application to Docker Hub using GitHub Actions. The workflow triggers on changes to the `Docker/node-mongo-network/` directory.
+- **Tools Used**: GitHub Actions, Docker, Docker Hub
+- **Location**: `.github/workflows/docker-publish.yml`
+
 
 ## 📁 Folder Structure
 
@@ -94,7 +99,6 @@ This folder documents my step-by-step hands-on learning of Docker from an absolu
 
 ## 🚧 Coming Up Next
 =======
-- Docker Hub + CI/CD integration
 - Dockerfile optimizations (multi-stage builds)
 
 ---
