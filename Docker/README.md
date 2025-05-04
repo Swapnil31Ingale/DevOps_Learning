@@ -39,49 +39,64 @@ This folder documents my step-by-step hands-on learning of Docker from an absolu
 ### 7. Multi-container Node.js + MongoDB App using Docker Compose
 - **Description**: A small Node.js app connected to MongoDB using a multi-container setup via Docker Compose.
 - **Tools Used**: Node.js, MongoDB, Docker Compose, Custom Networks, Named Volumes
-- **Location**: `DockerFiles/node-mongo-app/`
+- **Location**: `Docker/node-mongo-app/`
+
+# Scenario 8: Docker Networking with Compose 🌐
+- **Description**: A simulated 3-tier architecture using Docker Compose with custom user-defined networks to isolate communication between Web, API, and MongoDB services.
+- **Tools Used**: Node.js, MongoDB, Docker Compose, Custom Networks 
+- **Location**: `Docker/docker-networking/` 
+
+## 📂 Folder Structure
+
+
 
 ## 📁 Folder Structure
 
 ```
 .
+├── docker-networking
+│   ├── api
+│   │   ├── app.js
+│   │   └── Dockerfile
+│   ├── docker-compose.yml
+│   └── web
+│       ├── app.js
+│       └── Dockerfile
 ├── HTML_Static
 │   ├── Dockerfile
 │   └── index.html
-├── README.md
 ├── node-app
-│   ├── Dockerfile
-│   ├── app.js
 │   ├── app_bkp.js
+│   ├── app.js
 │   ├── docker-compose.yml
-│   ├── package-lock.json
+│   ├── Dockerfile
+│   ├── package_bkp.json
 │   ├── package.json
-│   └── package_bkp.json
+│   └── package-lock.json
 ├── node-mongo-counter
-│   ├── Dockerfile
 │   ├── app.js
 │   ├── docker-compose.yml
-│   ├── package-lock.json
-│   └── package.json
+│   ├── Dockerfile
+│   ├── package.json
+│   └── package-lock.json
 ├── node-mongo-network
-│   ├── Dockerfile
 │   ├── app.js
 │   ├── docker-compose.yml
+│   ├── Dockerfile
 │   └── package.json
-└── node-persist
-    ├── Dockerfile
-    ├── app.js
-    ├── docker-compose.yml
-    └── package.json
-```
+├── node-persist
+│   ├── app.js
+│   ├── docker-compose.yml
+│   ├── Dockerfile
+│   └── package.json
+└── README.md
 
+```
 
 ---
 
 ## 🚧 Coming Up Next
 =======
-- Docker Compose v3
-- Docker networks
 - Docker Hub + CI/CD integration
 - Dockerfile optimizations (multi-stage builds)
 
