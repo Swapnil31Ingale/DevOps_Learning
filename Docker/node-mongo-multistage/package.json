@@ -1,0 +1,15 @@
+{
+  "name": "node-multistage-demo",
+  "version": "1.0.0",
+  "description": "Node app with multi-stage Docker build",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Swapnil",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+
