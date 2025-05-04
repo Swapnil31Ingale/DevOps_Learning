@@ -41,13 +41,10 @@ This folder documents my step-by-step hands-on learning of Docker from an absolu
 - **Tools Used**: Node.js, MongoDB, Docker Compose, Custom Networks, Named Volumes
 - **Location**: `Docker/node-mongo-app/`
 
-# Scenario 8: Docker Networking with Compose 🌐
+### 8. Docker Networking with Compose 🌐
 - **Description**: A simulated 3-tier architecture using Docker Compose with custom user-defined networks to isolate communication between Web, API, and MongoDB services.
 - **Tools Used**: Node.js, MongoDB, Docker Compose, Custom Networks 
 - **Location**: `Docker/docker-networking/` 
-
-## 📂 Folder Structure
-
 
 
 ## 📁 Folder Structure
