@@ -36,6 +36,10 @@ This folder documents my step-by-step hands-on learning of Docker from an absolu
 - **Tools Used**: Docker Compose, Bind Mounts, Nodemon
 - **Location**: `Docker/node-app/`
   
+### 7. Multi-container Node.js + MongoDB App using Docker Compose
+- **Description**: A small Node.js app connected to MongoDB using a multi-container setup via Docker Compose.
+- **Tools Used**: Node.js, MongoDB, Docker Compose, Custom Networks, Named Volumes
+- **Location**: `DockerFiles/node-mongo-app/`
 
 ## 📁 Folder Structure
 
@@ -59,12 +63,16 @@ This folder documents my step-by-step hands-on learning of Docker from an absolu
 │   ├── docker-compose.yml
 │   ├── package-lock.json
 │   └── package.json
+├── node-mongo-network
+│   ├── Dockerfile
+│   ├── app.js
+│   ├── docker-compose.yml
+│   └── package.json
 └── node-persist
     ├── Dockerfile
     ├── app.js
     ├── docker-compose.yml
     └── package.json
-
 ```
 
 

@@ -1,0 +1,12 @@
+{
+  "name": "mongo-network-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "mongodb": "^5.8.0"
+  }
+}
+
