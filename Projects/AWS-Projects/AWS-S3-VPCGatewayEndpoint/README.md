@@ -84,17 +84,18 @@ This project has been fully automated using Terraform. All .tf files are located
 
 ## 📂 scripts/ Folder Contents
 
-provider.tf	     --> AWS provider configuration
-variables.tf     --> Input variables (region, CIDRs, key name, etc.)
-terraform.tfvars --> Actual values for variables (e.g., key name, IP)
-vpc.tf           --> VPC, subnets, route tables, and internet gateway
-bastion.tf       --> Bastion host EC2 instance and security group
-private_ec2.tf   --> rivate EC2 instance with IAM role and SG
-s3.tf            --> S3 bucket with public access blocked
-vpc_endpoint.tf  --> VPC Gateway Endpoint for S3
-nat_gateway.tf   --> NAT Gateway and private route table update
-iam.tf           --> IAM role, policy, and instance profile for EC2
-outputs.tf       --> Outputs like Bastion public IP for easy access
+- `provider.tf` → AWS provider configuration  
+- `variables.tf` → Input variables (region, CIDRs, key name, etc.)  
+- `terraform.tfvars` → Actual values for variables (e.g., key name, IP)  
+- `vpc.tf` → VPC, subnets, route tables, and internet gateway  
+- `bastion.tf` → Bastion host EC2 instance and security group  
+- `private_ec2.tf` → Private EC2 instance with IAM role and SG  
+- `s3.tf` → S3 bucket with public access blocked  
+- `vpc_endpoint.tf` → VPC Gateway Endpoint for S3  
+- `nat_gateway.tf` → NAT Gateway and private route table update  
+- `iam.tf` → IAM role, policy, and instance profile for EC2  
+- `outputs.tf` → Outputs like Bastion public IP for easy access  
+
 
 ## 🚀 Deploy with Terraform
 From the scripts/ directory:
@@ -105,7 +106,7 @@ terraform apply
 ```
 Once deployed, SSH into the Bastion host and then into the private EC2 instance to test S3 access using the AWS CLI.
 
-🧠 Key Learnings
+## 🧠 Key Learnings
 - VPC Gateway Endpoints allow secure, internal access to AWS services
 - NAT Gateways are still useful for general internet access
 - IAM roles are the preferred way to grant EC2 permissions
