@@ -26,8 +26,8 @@ This project demonstrates how to securely access an Amazon S3 bucket from a priv
 
 | Folder        | Description                                      |
 |---------------|--------------------------------------------------|
-| `infra/`      | (Optional) Infrastructure as Code templates      |
-| `scripts/`    | Shell scripts for testing or automation          |
+| `infra/`      | Infrastructure as Code templates                 |
+| `scripts/`    | (Optional)Shell scripts for testing or automation|
 | `docs/`       | Diagrams and architecture notes                  |
 | `screenshots/`| CLI or AWS Console screenshots for documentation |
 | `README.md`   | This file                                        |
@@ -79,11 +79,38 @@ This project demonstrates how to securely access an Amazon S3 bucket from a priv
 aws s3 ls s3://demo-s3bucket-123456789
 ```
 
+Ìª†Ô∏è Terraform Implementation
+This project has been fully automated using Terraform. All .tf files are located in the scripts/ folder and follow a modular, readable structure.
+
+Ì≥Ç scripts/ Folder Contents
+
+File	Purpose
+provider.tf	AWS provider configuration
+variables.tf	Input variables (region, CIDRs, key name, etc.)
+terraform.tfvars	Actual values for variables (e.g., key name, IP)
+vpc.tf	VPC, subnets, route tables, and internet gateway
+bastion.tf	Bastion host EC2 instance and security group
+private_ec2.tf	Private EC2 instance with IAM role and SG
+s3.tf	S3 bucket with public access blocked
+vpc_endpoint.tf	VPC Gateway Endpoint for S3
+nat_gateway.tf	NAT Gateway and private route table update
+iam.tf	IAM role, policy, and instance profile for EC2
+outputs.tf	Outputs like Bastion public IP for easy access
+
+Ì∫Ä Deploy with Terraform
+From the scripts/ directory:
+```bash
+terraform init
+terraform plan
+terraform apply
+```
+Once deployed, SSH into the Bastion host and then into the private EC2 instance to test S3 access using the AWS CLI.
+
 üß† Key Learnings
 - VPC Gateway Endpoints allow secure, internal access to AWS services
 - NAT Gateways are still useful for general internet access
 - IAM roles are the preferred way to grant EC2 permissions
 - Route tables can support both NAT and VPC endpoints simultaneously
-
+- Terraform makes infrastructure reproducible, scalable, and version-controlled
 
 ‚úÖ This project is part of my DevOps Learning journey. Feel free to fork or star the repo if you find it helpful!

@@ -1,0 +1,32 @@
+# ─── Terraform ─────────────────────────────────────────────
+**/.terraform/
+**/.terraform.lock.hcl
+**/*.tfstate
+**/*.tfstate.backup
+**/terraform.tfvars
+
+# ─── SSH Keys ───────────────────────────────────────────────
+**/*.pem
+
+# ─── Editor/IDE Files ───────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─── OS Files ───────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── Logs and Temp Files ────────────────────────────────────
+*.log
+*.tmp
+*.bak
+
+# ─── Python Virtual Envs (if any future scripts) ────────────
+**/venv/
+**/__pycache__/
+
+# ─── Node Modules (if you use CDK or frontend tools) ────────
+**/node_modules/
+
