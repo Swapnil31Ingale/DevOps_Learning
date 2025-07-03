@@ -79,25 +79,24 @@ This project demonstrates how to securely access an Amazon S3 bucket from a priv
 aws s3 ls s3://demo-s3bucket-123456789
 ```
 
-í» ï¸ Terraform Implementation
+## ï¿½ï¿½ï¿½ï¸ Terraform Implementation
 This project has been fully automated using Terraform. All .tf files are located in the scripts/ folder and follow a modular, readable structure.
 
-í³‚ scripts/ Folder Contents
+## ï¿½ï¿½ï¿½ scripts/ Folder Contents
 
-File	Purpose
-provider.tf	AWS provider configuration
-variables.tf	Input variables (region, CIDRs, key name, etc.)
-terraform.tfvars	Actual values for variables (e.g., key name, IP)
-vpc.tf	VPC, subnets, route tables, and internet gateway
-bastion.tf	Bastion host EC2 instance and security group
-private_ec2.tf	Private EC2 instance with IAM role and SG
-s3.tf	S3 bucket with public access blocked
-vpc_endpoint.tf	VPC Gateway Endpoint for S3
-nat_gateway.tf	NAT Gateway and private route table update
-iam.tf	IAM role, policy, and instance profile for EC2
-outputs.tf	Outputs like Bastion public IP for easy access
+provider.tf	     --> AWS provider configuration
+variables.tf     --> Input variables (region, CIDRs, key name, etc.)
+terraform.tfvars --> Actual values for variables (e.g., key name, IP)
+vpc.tf           --> VPC, subnets, route tables, and internet gateway
+bastion.tf       --> Bastion host EC2 instance and security group
+private_ec2.tf   --> rivate EC2 instance with IAM role and SG
+s3.tf            --> S3 bucket with public access blocked
+vpc_endpoint.tf  --> VPC Gateway Endpoint for S3
+nat_gateway.tf   --> NAT Gateway and private route table update
+iam.tf           --> IAM role, policy, and instance profile for EC2
+outputs.tf       --> Outputs like Bastion public IP for easy access
 
-íº€ Deploy with Terraform
+##  ï¿½ï¿½ï¿½ Deploy with Terraform
 From the scripts/ directory:
 ```bash
 terraform init
