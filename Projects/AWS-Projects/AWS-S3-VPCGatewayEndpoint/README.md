@@ -79,10 +79,10 @@ This project demonstrates how to securely access an Amazon S3 bucket from a priv
 aws s3 ls s3://demo-s3bucket-123456789
 ```
 
-## ���️ Terraform Implementation
+## 🛠️ Terraform Implementation
 This project has been fully automated using Terraform. All .tf files are located in the scripts/ folder and follow a modular, readable structure.
 
-## ��� scripts/ Folder Contents
+## 📂 scripts/ Folder Contents
 
 provider.tf	     --> AWS provider configuration
 variables.tf     --> Input variables (region, CIDRs, key name, etc.)
@@ -96,7 +96,7 @@ nat_gateway.tf   --> NAT Gateway and private route table update
 iam.tf           --> IAM role, policy, and instance profile for EC2
 outputs.tf       --> Outputs like Bastion public IP for easy access
 
-##  ��� Deploy with Terraform
+## 🚀 Deploy with Terraform
 From the scripts/ directory:
 ```bash
 terraform init
