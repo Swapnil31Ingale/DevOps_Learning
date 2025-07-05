@@ -7,3 +7,9 @@ __pycache__/
 *.log
 *.pem
 
+# ─── Terraform ─────────────────────────────────────────────
+**/.terraform/
+**/.terraform.lock.hcl
+**/*.tfstate
+**/*.tfstate.backup
+**/terraform.tfvars
