@@ -25,6 +25,8 @@ owner=$1
 repo=$2
 
 # GitHub username and personal access token that needs to be export as environment variables
+# export USERNAME="username"
+# export TOKEN="token"
 USERNAME=$username
 TOKEN=$token
 
