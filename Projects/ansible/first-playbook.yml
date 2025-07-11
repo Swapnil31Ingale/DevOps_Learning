@@ -1,0 +1,19 @@
+---
+- name: First test ansible playbook
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Install nginx
+      #shell: apt-get install -y nginx
+      apt:
+        name: nginx
+        state: present
+    - name: Start nginx
+      service:
+        name: nginx
+        state: started
+    - name: Ensure nginx is enabled
+      service:     
+        name: nginx
+        enabled: true
