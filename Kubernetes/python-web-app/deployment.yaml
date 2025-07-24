@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-sample-app
+  labels:
+    app: python-sample-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: python-sample-app
+  template:
+    metadata:
+      labels:
+        app: python-sample-app
+    spec:
+      containers:
+      - name: python-sample-app-container
+        image: swapnil31ingale/python-sample-app:v1
+        volumeMounts:
+          - name: db-cred
+            mountPath: /opt
+        ports:
+        - containerPort: 8000
+      volumes:
+        - name: db-cred
+          secret:
+            secretName: db-pwd
+
