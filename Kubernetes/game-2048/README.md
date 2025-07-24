@@ -41,7 +41,7 @@ Namespace: game-2048
 Deployment: 5 replicas of 2048 game pods
 Service: NodePort
 Ingress: With ALB annotations
-📁 Uploaded file: 2048_full.yaml
+📁 Uploaded file: [2048_full.yaml](./2048_full.yaml)  
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/examples/2048/2048_full.yaml
 ```
@@ -53,7 +53,7 @@ eksctl utils associate-iam-oidc-provider --cluster demo-cluster --approve
 ```
 
 ### 6. 📥 Download IAM Policy for ALB Controller
-📁 Uploaded file: iam_policy.json
+📁 Uploaded file: [iam_policy.json](./iam_policy.json) 
 ```bash
 curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.11.0/docs/install/iam_policy.json
 ```
@@ -101,7 +101,7 @@ helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n ku
 ```
 
 ### 📸 Running Application Screenshot
-screenshots/2048-game.png
+![Game Output](./screenshots/2048-game-output.png)
 
 
 ###  💡 Highlights & Key Concepts
@@ -109,80 +109,63 @@ screenshots/2048-game.png
 IRSA enables fine-grained access control by letting Kubernetes service accounts securely assume IAM roles. Instead of exposing long-lived AWS credentials inside pods, IRSA allows pods to fetch temporary credentials via a federated OIDC token.
 
 📌 Why it’s important:
-
 🌍 Secure pod-to-AWS integration
-
 🔐 No hardcoded secrets or environment variables
-
 🧼 Follows least-privilege principle
-
 IRSA is essential for controllers like the AWS Load Balancer Controller, which needs to call AWS APIs to provision ALBs, manage security groups, and tag resources — and it must do so securely and in a way scoped to the cluster.
 
 📦 Helm Charts
 Helm is Kubernetes’ package manager. A Helm chart is a reusable, parameterized collection of Kubernetes manifests (like Deployments, Services, Ingress). It allows you to deploy apps in a modular and upgrade-friendly way.
 
 📌 Why it’s important:
-
 📦 One command deploys many manifests
-
 🎛️ Configurable via --set flags
-
 🔁 Supports upgrades, rollbacks, and templating
-
 In this project, Helm was used to install the AWS Load Balancer Controller, ensuring consistent configuration, lifecycle management, and reusability across environments.
 
 ☁️ Fargate Profiles for Namespace Targeting
 AWS Fargate lets you run Kubernetes pods without managing EC2 nodes. By defining a Fargate profile tied to a namespace, you can selectively run only certain workloads on Fargate while leaving others for node-based compute.
 
 📌 Why it’s important:
-
 🚫 No server management
-
 🔄 Pay-per-pod scalability
-
 🧱 Workload isolation via namespaces
-
 In this deployment, the game-2048 namespace was mapped to Fargate to keep app pods lightweight and serverless.
 
 🌐 AWS Load Balancer Controller
 This controller watches Kubernetes Ingress resources and automatically provisions Application Load Balancers (ALBs) via AWS APIs.
 
 📌 Why it’s important:
-
 🚪 External access to apps via ALB
-
 📶 Supports path-based routing, TLS termination, and WAF
-
 🔧 Integrates seamlessly with Kubernetes Ingress
-
 It replaces older methods like Classic ELBs or manually managing ALBs outside Kubernetes.
 
 🎮 Sample Application Deployment via YAML
 The 2048_full.yaml manifest demonstrates a real-world workload with:
 
 🧱 Namespace creation
-
 🚀 Deployment with replicas
-
 📡 Service for internal routing
-
 🌐 Ingress to trigger ALB creation
-
 This end-to-end demo proves how Kubernetes, AWS networking, and Helm come together to expose an app securely and scalably.
 
 ### 🔍 Useful Links
-ALB Controller GitHub
-eksctl Docs
-Helm Docs
-2048 YAML Reference
+- [ALB Controller GitHub](https://github.com/kubernetes-sigs/aws-load-balancer-controller)
+- [eksctl Docs](https://eksctl.io/)
+- [Helm Docs](https://helm.sh/docs/)
+- [2048 YAML Reference](https://docs.aws.amazon.com/eks/latest/userguide/auto-elb-example.html)
+
 
 ### 📂 Directory Structure (after upload)
-
+```
+.
 ├── README.md
 ├── iam_policy.json
 ├── 2048_full.yaml
 └── screenshots/
-    └── 2048-game.png
+    └── 2048-game-output.png
+```
 
 ## 🙌 Credits
 
